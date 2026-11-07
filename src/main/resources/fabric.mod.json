@@ -11,9 +11,9 @@
 		"cassiancc"
 	],
 	"contact": {
-		"homepage": "https://modrinth.com/project/embers-and-icicles",
-		"sources": "https://github.com/cassiancc/embers-and-icicles",
-		"issues": "https://github.com/cassiancc/embers-and-icicles/issues"
+		"homepage": "https://modrinth.com/mod/ddyc",
+		"sources": "https://github.com/AstralOrdana/DontDropYourCompass",
+		"issues": "https://github.com/AstralOrdana/DontDropYourCompass/issues"
 	},
 	"license": "${mod_license}",
 	"icon": "icon.png",

@@ -11,7 +11,6 @@ val loader = sc.current.project.substringAfter('-')
 val fabric = loader == "fabric"
 val minecraft = stonecutter.current.version
 val mcVersion = stonecutter.current.project.substringBeforeLast('-')
-val edgeRelease = !fabric
 val unobfuscated = stonecutter.eval(mcVersion, ">26")
 
 tasks.named<ProcessResources>("processResources") {
@@ -235,16 +234,6 @@ stonecutter {
 	}
 }
 
-if (fabric) {
-	fabricApi {
-		configureDataGeneration() {
-			outputDirectory = file("$rootDir/src/main/datagen/$minecraft")
-			client = true
-			modId = "embers_and_icicles"
-		}
-	}
-}
-
 tasks {
 	register<Copy>("buildAndCollect") {
 		group = "build"
@@ -279,11 +268,7 @@ publishMods {
 	additionalFiles.from(loomx.modSourcesJar.map { it.archiveFile.get() })
 
 	// one of BETA, ALPHA, STABLE
-	type = if (edgeRelease) {
-		BETA
-	} else {
-		STABLE
-	}
+	type = STABLE
 	displayName = "${property("mod.name")} ${property("mod.version")} for ${stonecutter.current.version}"
 	version = "${property("mod.version")}+${property("deps.minecraft")}-${loader}"
 	changelog = provider { rootProject.file("CHANGELOG-LATEST.md").readText() }
