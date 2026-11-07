@@ -1,0 +1,32 @@
+issueTrackerURL="https://github.com/Silversmith-Mods/DontDropYourCompass/issues"
+displayURL="https://modrinth.com/project/ddlc/"
+logoFile= "icon.png"
+iconFile= "icon.png"
+license="${mod_license}"
+modLoader = "javafml"
+loaderVersion = "[4,)"
+
+[[mods]]
+modId="dont_drop_your_compass"
+version="${mod_version}"
+displayName="${mod_name}"
+description="${mod_description}"
+authors="Ordana"
+credits="Ordana, cassiancc"
+
+[[dependencies.dont_drop_your_compass]]
+modId="neoforge"
+type="required"
+versionRange="[21, )"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.dont_drop_your_compass]]
+modId="minecraft"
+type="required"
+versionRange="${neo_minecraft_dep}"
+ordering="NONE"
+side="BOTH"
+
+[[mixins]]
+config = "dont_drop_your_compass-common.mixins.json"

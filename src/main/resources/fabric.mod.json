@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "dont_drop_your_compass",
+	"version": "${mod_version}",
+	"name": "${mod_name}",
+	"description": "${mod_description}",
+	"authors": [
+		"Ordana"
+	],
+	"contributors": [
+		"cassiancc"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/project/embers-and-icicles",
+		"sources": "https://github.com/cassiancc/embers-and-icicles",
+		"issues": "https://github.com/cassiancc/embers-and-icicles/issues"
+	},
+	"license": "${mod_license}",
+	"icon": "icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"com.ordana.dont_drop_your_compass.fabric.FabricEntrypoint"
+		]
+	},
+	"mixins": [
+		"dont_drop_your_compass-common.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=${fabric_loader_version}",
+		"fabric-api": "*",
+		"minecraft": "${fabric_minecraft_dep}"
+	}
+}
