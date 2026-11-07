@@ -1,6 +1,7 @@
 package com.ordana.dont_drop_your_compass;
 
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 
@@ -13,7 +14,7 @@ public class ModTags {
     }
 
     private static TagKey<Item> registerItemTag(String id) {
-        return TagKey.create(Registry.ITEM_REGISTRY, DontDropYourCompass.res(id));
+        return TagKey.create(Registries.ITEM, DontDropYourCompass.res(id));
     }
 
 }
